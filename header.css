@@ -1,0 +1,95 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+}
+
+.profile h1 {
+    position: absolute;
+    bottom: -5%;
+    color: white;
+}
+
+.about {
+    padding: 2% 5%;
+    background-color: white;
+}
+
+.about h1 {
+    font-size: clamp(24px, 3vw, 48px);
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: clamp(12px, 1.5vw, 32px);
+    color: rgb(150, 150, 150);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .header .profile {
+        flex: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    .header .profile h1 {
+        top: 10%;
+        margin: 0;
+    }
+
+    .about {
+        flex: 1;
+        position: relative;
+        margin-left: -20%;
+        z-index: 2;          
+        margin-top: 50%;
+        padding: 5% 10%;  
+    }
+
+    .about h1 {
+        font-size: clamp(24px, 4vw, 56px);
+    }
+
+    .about p {
+        font-size: clamp(12px, 1.5vw, 32px);
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header .profile h1 {
+        font-size: clamp(48px, 9vw, 72px);
+    }
+
+    .about h1 {
+        font-size: clamp(24px, 6vw, 40px);
+    }
+
+    .about p {
+        font-size: clamp(12px, 4vw, 32px);
+        
+    }
+}

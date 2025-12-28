@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Newsreader";
+    src: url("fonts/Newsreader/Newsreader_14pt-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: "Newsreader", serif;
+    margin: 0;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% 15%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 32px;;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: clamp(32px, 4vw, 56px);
+
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* wraps on small screens */
+    gap: 20px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 5% 10%;
+    }
+
+    .icon {
+        width: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 7%;
+    }
+
+    h1 {
+        font-size: clamp(24px, 6vw, 40px);
+
+    }
+
+    .icon {
+        width: 24px;
+    }
+}
