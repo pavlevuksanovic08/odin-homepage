@@ -55,7 +55,7 @@ function loadProjects() {
 
         let image = document.createElement('img');
         image.src = project.image || './images/default.png';
-        image.alt = project.title || 'Project Screenshot';
+        image.alt = `${project.title} screenshot` || 'Project Screenshot';
         projectElement.appendChild(image);
 
         let projectDetails = document.createElement('div');
@@ -70,11 +70,11 @@ function loadProjects() {
 
         let linkElement = document.createElement('a');
         linkElement.href = project.link || '#';
-        linkElement.target = "_blank";
 
         let iconElement = document.createElement('img');
         iconElement.className = 'icon';
         iconElement.src = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg";
+        iconElement.alt = `Open ${project.title || 'project'} repository on GitHub`;
         linkElement.appendChild(iconElement);
 
         projectTitle.appendChild(linkElement);
